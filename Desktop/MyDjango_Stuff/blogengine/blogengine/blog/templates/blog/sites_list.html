@@ -1,0 +1,10 @@
+{% extends 'blog/base_blog.html' %}
+
+{% block title %}
+  {{ site.title }} - {{ site.super }}
+{% endblock %}
+
+<h1 class="mb-5">Sites:</h1>
+{% for site in site_object.object_list %}
+  {% include 'blog/includes/site_card_template.html' %}
+{% endfor %}
